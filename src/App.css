@@ -1,5 +1,11 @@
-*{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  background-color: #D8FFF8;
+  min-height: 100vh;
+  width: 100%;
 }

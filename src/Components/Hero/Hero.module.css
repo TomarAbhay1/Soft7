@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Rubik:wght@400;500;600&display=swap');
+
 .hero {
-    background: rgb(255, 255, 255);
+    background: linear-gradient(to bottom, #D8FFF8 0%, #D8FFF8 60%, #FFFFFF 100%);
     padding: 2rem 1rem;
 }
 
@@ -15,6 +17,11 @@
  font-size: 2.7rem;
  align-items: center;
  text-align: center;
+}
+
+.heroText h1 {
+  font-family: 'ADLaM Display', cursive;
+  font-weight: 400;
 }
 
 .heroText span{
@@ -44,16 +51,21 @@ text-align: center;
 width: 200px;
 height: 50px;
 font-size: 1.1rem;
-color: white;
-background-color: black;
-border: 1px solid #020202;
-border-radius: 15px;
-transition: transform 0.3s ease;
+color: black;
+background-color: white;
+border: none;
+border-radius: 30px;
+font-family: 'Rubik', sans-serif;
+font-weight: 500;
+cursor: pointer;
+box-shadow: 4px 4px 0px #25D366;
+transition: all 0.3s ease;
 }
 
 .heroButtons button:hover{
-  background-color: #3a3939;
-  transform: scale(1.02);
+  background-color: #E8F9F5;
+  box-shadow: 2px 2px 0px #25D366;
+  transform: translate(2px, 2px);
 }
 
 @media (max-width: 768px) {
@@ -93,54 +105,137 @@ transition: transform 0.3s ease;
   }
 }
 .productVideo{
- background-color: aqua;
+ background: linear-gradient(135deg, #5BA3D0 0%, #1E5A96 100%);
  width: 50rem;
  height: 30rem;
  margin-top: 5rem;
-border-radius: 1rem;
-text-align:center;
+ border-radius: 1rem;
+ text-align: center;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: white;
+ font-size: 2.5rem;
+ font-family: 'Rubik', sans-serif;
+ font-weight: 500;
+ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-.slider {
-  overflow: hidden;
-  width: 100%;
-  margin: 2rem 0;
-  background: #E4F5F8;
 
+.trustLine {
+  background-color: transparent;
+  padding: 3rem 2rem;
+  margin-top: 5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  max-width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.trustLine:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.slider {
+  overflow: visible;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(to bottom, rgba(228, 245, 248, 0.5) 0%, #E4F5F8 30%, #E4F5F8 70%, #FFFFFF 100%);
+  padding: 3rem 2rem;
 }
 
 .slideTrack{
   display: flex;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   width: max-content;
-  animation: scrollLeft 10s linear infinite;
+  justify-content: flex-start;
+  gap: 2rem;
+  animation: scrollLeft 30s linear infinite;
 }
 
 .slideTrack2{
   display: flex;
   margin: 1.5rem 0;
   width: max-content;
-  animation: scrollRight 10s linear infinite;
+  justify-content: flex-start;
+  gap: 2rem;
+  animation: scrollRight 30s linear infinite;
 }
 
 .box {
-  min-width: 13rem;
-  height: 2rem;
-  margin: 0 4rem;
-  background: white;
-  color: black;
+  min-width: 180px;
+  padding: 1rem 1.5rem;
+  background: #F0F9FB;
+  color: #333;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
-  border-radius: 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.slideTrack .box:nth-child(4n+1) {
+  color: #17A697;
+}
+
+.slideTrack .box:nth-child(4n+2) {
+  color: #0066CC;
+}
+
+.slideTrack .box:nth-child(4n+3) {
+  color: #17A697;
+}
+
+.slideTrack .box:nth-child(4n+4) {
+  color: #1A1A4D;
+}
+
+.slideTrack2 .box:nth-child(4n+1) {
+  color: #17A697;
+}
+
+.slideTrack2 .box:nth-child(4n+2) {
+  color: #0066CC;
+}
+
+.slideTrack2 .box:nth-child(4n+3) {
+  color: #FF9500;
+}
+
+.slideTrack2 .box:nth-child(4n+4) {
+  color: #17A697;
+}
+
+.box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 @keyframes scrollLeft {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 1rem));
+  }
 }
 
 @keyframes scrollRight {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  0% {
+    transform: translateX(calc(-50% - 1rem));
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

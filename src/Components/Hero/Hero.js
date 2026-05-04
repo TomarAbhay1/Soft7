@@ -26,28 +26,30 @@ export default function Hero() {
           </div>
           <div className={styles.productVideo}>Product Video</div>
 
+          <div className={styles.trustLine}>
+            Loved and trusted by 11,000+ businesses, across the globally
+          </div>
+
           <div className={styles.slider}>
              <div className={styles.slideTrack}>
                <div className={styles.box}>Bulk Messaging</div>
                <div className={styles.box}>Lead Generation</div>
-               <div className={styles.box}>Message Template</div>
+               <div className={styles.box}>Message Templates</div>
                <div className={styles.box}>Multi-user Access</div>
-                
                <div className={styles.box}>Bulk Messaging</div>
                <div className={styles.box}>Lead Generation</div>
-               <div className={styles.box}>Message Template</div>
+               <div className={styles.box}>Message Templates</div>
                <div className={styles.box}>Multi-user Access</div>
              </div>
              <div className={styles.slideTrack2}>
-               <div className={styles.box}>CRM Integeration</div>
-               <div className={styles.box}>Chatbot Automation</div>
-               <div className={styles.box}>Payments & Renewals</div>
                <div className={styles.box}>Verified business profile</div>
-                
-               <div className={styles.box}>CRM Integeration</div>
-               <div className={styles.box}>Chatbot Automation</div>
+               <div className={styles.box}>CRM Intergration</div>
                <div className={styles.box}>Payments & Renewals</div>
+               <div className={styles.box}>Chatbot Automation</div>
                <div className={styles.box}>Verified business profile</div>
+               <div className={styles.box}>CRM Intergration</div>
+               <div className={styles.box}>Payments & Renewals</div>
+               <div className={styles.box}>Chatbot Automation</div>
              </div>
           </div>
         
