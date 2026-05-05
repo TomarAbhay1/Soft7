@@ -32,24 +32,42 @@ export default function Hero() {
 
           <div className={styles.slider}>
              <div className={styles.slideTrack}>
-               <div className={styles.box}>Bulk Messaging</div>
-               <div className={styles.box}>Lead Generation</div>
-               <div className={styles.box}>Message Templates</div>
-               <div className={styles.box}>Multi-user Access</div>
-               <div className={styles.box}>Bulk Messaging</div>
-               <div className={styles.box}>Lead Generation</div>
-               <div className={styles.box}>Message Templates</div>
-               <div className={styles.box}>Multi-user Access</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Bulk Messaging</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Lead Generation</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Message Templates</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Multi-user Access</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Bulk Messaging</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Lead Generation</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Message Templates</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Multi-user Access</div>
+               {/* Duplicate for infinite scroll */}
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Bulk Messaging</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Lead Generation</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Message Templates</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Multi-user Access</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Bulk Messaging</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Lead Generation</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Message Templates</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Multi-user Access</div>
              </div>
              <div className={styles.slideTrack2}>
-               <div className={styles.box}>Verified business profile</div>
-               <div className={styles.box}>CRM Intergration</div>
-               <div className={styles.box}>Payments & Renewals</div>
-               <div className={styles.box}>Chatbot Automation</div>
-               <div className={styles.box}>Verified business profile</div>
-               <div className={styles.box}>CRM Intergration</div>
-               <div className={styles.box}>Payments & Renewals</div>
-               <div className={styles.box}>Chatbot Automation</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Verified business profile</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>CRM Intergration</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Payments & Renewals</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Chatbot Automation</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Verified business profile</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>CRM Intergration</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Payments & Renewals</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Chatbot Automation</div>
+               {/* Duplicate for infinite scroll */}
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Verified business profile</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>CRM Intergration</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Payments & Renewals</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Chatbot Automation</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Verified business profile</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>CRM Intergration</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Payments & Renewals</div>
+               <div className={styles.box}><span className={styles.icon}>🌟</span>Chatbot Automation</div>
              </div>
           </div>
         
