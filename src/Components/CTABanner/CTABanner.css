@@ -1,0 +1,124 @@
+.cta-banner-section {
+  background: #fffdfa; /* matching FAQ cream background */
+  padding: 60px 20px 120px 20px;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-banner-container {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.cta-banner-box {
+  background: linear-gradient(135deg, #061c16 0%, #032a1e 50%, #061c16 100%);
+  border-radius: 30px;
+  padding: 60px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  box-shadow: 0 30px 60px rgba(6, 28, 22, 0.2);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.cta-banner-box::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.cta-banner-box.banner-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cta-banner-content {
+  position: relative;
+  z-index: 1;
+  flex: 1.5;
+}
+
+.cta-banner-heading {
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.cta-banner-subtext {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 400px;
+}
+
+.cta-banner-actions {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+}
+
+.banner-primary-btn {
+  background: #10b981;
+  color: #064e3b;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  transition: all 0.3s ease;
+}
+
+.banner-primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+.banner-secondary-btn {
+  background: transparent;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.banner-secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 900px) {
+  .cta-banner-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 30px;
+  }
+  .cta-banner-actions {
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+  }
+}

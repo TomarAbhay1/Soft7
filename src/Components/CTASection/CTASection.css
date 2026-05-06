@@ -1,0 +1,124 @@
+.cta-section {
+  position: relative;
+  padding: 160px 20px;
+  transition: background 1.2s ease, color 1.2s ease;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta-light {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.cta-dark {
+  background: radial-gradient(circle at center, #064e3b 0%, #022c22 50%, #020617 100%);
+  color: #f8fafc;
+}
+
+.cta-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.cta-dark .cta-glow {
+  opacity: 1;
+}
+
+.cta-container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s;
+}
+
+.cta-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cta-heading {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+
+.cta-subheading {
+  font-size: 20px;
+  color: #64748b;
+  margin-bottom: 48px;
+  line-height: 1.6;
+}
+
+.cta-dark .cta-subheading {
+  color: #94a3b8;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.cta-primary-btn {
+  background: #10b981;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cta-primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+}
+
+.cta-secondary-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #0f172a;
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-dark .cta-secondary-btn {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.cta-dark .cta-secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 768px) {
+  .cta-heading {
+    font-size: 40px;
+  }
+  .cta-buttons {
+    flex-direction: column;
+  }
+}

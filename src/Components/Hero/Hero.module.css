@@ -150,11 +150,11 @@ transition: all 0.3s ease;
 }
 
 .slider {
-  overflow: visible;
+  overflow: hidden;
   width: 100%;
   margin: 0;
   background: linear-gradient(to bottom, rgba(228, 245, 248, 0.5) 0%, #E4F5F8 30%, #E4F5F8 70%, #FFFFFF 100%);
-  padding: 3rem 2rem;
+  padding: 3rem 0;
 }
 
 .slideTrack {
@@ -163,7 +163,8 @@ transition: all 0.3s ease;
   width: max-content;
   justify-content: flex-start;
   gap: 2rem;
-  animation: scrollRight 14s linear infinite;
+  padding-right: 2rem;
+  animation: scrollRight 25s linear infinite;
 }
 
 .slideTrack2{
@@ -172,7 +173,8 @@ transition: all 0.3s ease;
   width: max-content;
   justify-content: flex-start;
   gap: 2rem;
-  animation: scrollLeft 14s linear infinite;
+  padding-right: 2rem;
+  animation: scrollLeft 25s linear infinite;
 }
 
 .box {
@@ -241,9 +243,9 @@ transition: all 0.3s ease;
 
 @keyframes scrollRight {
   0% {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
   100% {
-    transform: translateX(50%);
+    transform: translateX(0);
   }
 }
