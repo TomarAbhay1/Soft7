@@ -1,7 +1,30 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Testimonials.css';
 
 export default function Testimonials() {
+  const [isVisible, setIsVisible] = useState(false);
+  const gridRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (gridRef.current) {
+      observer.observe(gridRef.current);
+    }
+
+    return () => {
+      if (gridRef.current) observer.unobserve(gridRef.current);
+    };
+  }, []);
+
   return (
     <section className="testimonials-section">
       <div className="testimonials-container">
@@ -22,7 +45,10 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="testimonials-grid">
+        <div 
+          className={`testimonials-grid unfold-3d ${isVisible ? 'unfold-visible' : ''}`}
+          ref={gridRef}
+        >
           {/* Card 1 */}
           <div className="testimonial-card light-card">
             <p className="testimonial-quote">

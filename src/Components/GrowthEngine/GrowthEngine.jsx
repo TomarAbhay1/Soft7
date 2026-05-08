@@ -3,16 +3,13 @@ import './GrowthEngine.css';
 
 export default function GrowthEngine() {
   const [isDark, setIsDark] = useState(false);
+  const [scrollTilt, setScrollTilt] = useState({ rotateX: 20, rotateY: -15 });
   const sectionRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsDark(true);
-        } else {
-          setIsDark(false);
-        }
+        setIsDark(entry.isIntersecting);
       },
       { threshold: 0.15 }
     );
@@ -21,8 +18,33 @@ export default function GrowthEngine() {
       observer.observe(sectionRef.current);
     }
 
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
+      
+      const rect = sectionRef.current.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      
+      // Calculate how far the section is through the viewport
+      // 0 means it's just entering the bottom, 1 means it's leaving the top
+      const progress = 1 - (rect.top + rect.height) / (viewportHeight + rect.height);
+      
+      // Map progress (0 to 1) to rotation angles
+      // Start tilted away (e.g., rotateX: 30, rotateY: -20)
+      // End flat or slightly tilted the other way
+      const clampedProgress = Math.max(0, Math.min(1, progress));
+      
+      const newRotateX = 25 - (clampedProgress * 40); // from 25 to -15
+      const newRotateY = -20 + (clampedProgress * 30); // from -20 to +10
+
+      setScrollTilt({ rotateX: newRotateX, rotateY: newRotateY });
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Init
+
     return () => {
       if (sectionRef.current) observer.unobserve(sectionRef.current);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -43,8 +65,14 @@ export default function GrowthEngine() {
             Automate chats, capture leads, and scale customer engagement without extra effort.
           </p>
           
-          <div className="growth-hero-box-wrapper">
-             <div className="growth-hero-box-inner">
+          <div className="growth-hero-box-wrapper" style={{ perspective: '1200px' }}>
+             <div 
+                className="growth-hero-box-inner" 
+                style={{ 
+                  transform: `rotateX(${scrollTilt.rotateX}deg) rotateY(${scrollTilt.rotateY}deg)`,
+                  transition: 'transform 0.1s linear'
+                }}
+             >
                <div className="growth-hero-box-core">
                  
                  <div className="phone-mockup">

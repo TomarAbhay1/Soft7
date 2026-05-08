@@ -58,9 +58,22 @@ const features = [
 
 export default function Features() {
   const [activeTab, setActiveTab] = useState(0);
+  const [tilt, setTilt] = useState({ rx: 0, ry: 0, active: false });
 
   const switchTab = (index) => {
     setActiveTab(index);
+    setTilt({ rx: 0, ry: 0, active: false }); // Reset tilt when switching
+  };
+
+  const handleMouseMove = (e) => {
+    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+    const x = (e.clientX - left - width / 2) / (width / 2); // -1 to 1
+    const y = (e.clientY - top - height / 2) / (height / 2); // -1 to 1
+    setTilt({ rx: -y * 8, ry: x * 8, active: true });
+  };
+
+  const handleMouseLeave = () => {
+    setTilt({ rx: 0, ry: 0, active: false });
   };
 
   const prev = () => switchTab((activeTab - 1 + features.length) % features.length);
@@ -105,9 +118,18 @@ export default function Features() {
                 <div 
                   key={i} 
                   className={`feat-card-item ${positionClass}`}
+                  onMouseMove={i === activeTab ? handleMouseMove : undefined}
+                  onMouseLeave={i === activeTab ? handleMouseLeave : undefined}
                   style={{ 
                     background: feature.theme,
-                    '--card-shadow': feature.shadow
+                    '--card-shadow': feature.shadow,
+                    ...(i === activeTab && tilt.active ? {
+                      transform: `scale(1) translateZ(0) rotateX(${tilt.rx}deg) rotateY(${tilt.ry}deg)`,
+                      transition: 'transform 0.1s ease-out, box-shadow 0.1s ease'
+                    } : i === activeTab && !tilt.active ? {
+                      transform: `scale(1) translateZ(0) rotateX(0deg) rotateY(0deg)`,
+                      transition: 'transform 0.5s ease-out, box-shadow 0.5s ease'
+                    } : {})
                   }}
                 >
                   <div className="feat-cardLeft">

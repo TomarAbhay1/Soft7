@@ -1,7 +1,30 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Pricing.css';
 
 export default function Pricing() {
+  const [isVisible, setIsVisible] = useState(false);
+  const gridRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (gridRef.current) {
+      observer.observe(gridRef.current);
+    }
+
+    return () => {
+      if (gridRef.current) observer.unobserve(gridRef.current);
+    };
+  }, []);
+
   return (
     <section className="pricing-section">
       <div className="pricing-container">
@@ -19,7 +42,10 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="pricing-grid">
+        <div 
+          className={`pricing-grid unfold-3d ${isVisible ? 'unfold-visible' : ''}`}
+          ref={gridRef}
+        >
           
           {/* Starter Plan */}
           <div className="pricing-card">

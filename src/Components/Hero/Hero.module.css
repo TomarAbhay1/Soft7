@@ -7,11 +7,69 @@
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Rubik:wght@400;500;600&display=swap');
 
 .hero {
+    position: relative;
+    overflow: hidden;
     background: linear-gradient(to bottom, #D8FFF8 0%, #D8FFF8 60%, #FFFFFF 100%);
     padding: 2rem 1rem;
 }
 
+/* Glassmorphism Background Orbs */
+.orbContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.heroOrb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+    animation: orbFloat 20s infinite ease-in-out alternate;
+    transform-style: preserve-3d;
+}
+
+.orb1 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(16,185,129,0.4) 0%, rgba(16,185,129,0) 70%);
+    top: -10%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.orb2 {
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(59,130,246,0.3) 0%, rgba(59,130,246,0) 70%);
+    bottom: -20%;
+    right: -10%;
+    animation-delay: -5s;
+}
+
+.orb3 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(168,85,247,0.2) 0%, rgba(168,85,247,0) 70%);
+    top: 40%;
+    left: 30%;
+    animation-delay: -10s;
+}
+
+@keyframes orbFloat {
+    0% { transform: translate3d(0, 0, 0) rotateZ(0deg) scale(1); }
+    50% { transform: translate3d(50px, -50px, 100px) rotateZ(180deg) scale(1.1); }
+    100% { transform: translate3d(-30px, 40px, -50px) rotateZ(360deg) scale(0.9); }
+}
+
 .heroContainer {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
