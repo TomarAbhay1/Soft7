@@ -1,12 +1,22 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from '../src/Pages/Home/Home';
-import Navbar from './Components/Navbar/Navbar';
+import Broadcast from './Pages/Broadcast/Broadcast';
+import Chatbot from './Pages/Chatbot/Chatbot';
+import Crm from './Pages/Crm/Crm';
 
 function App() {
   return (
-    <div className="App">
-      <Home/>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/broadcast" element={<Broadcast />} />
+          <Route path="/chatbot" element={<Chatbot />} />
+          <Route path="/crm" element={<Crm />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

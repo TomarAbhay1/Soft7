@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './feature.css';
 
 const features = [
@@ -59,6 +60,7 @@ const features = [
 export default function Features() {
   const [activeTab, setActiveTab] = useState(0);
   const [tilt, setTilt] = useState({ rx: 0, ry: 0, active: false });
+  const navigate = useNavigate();
 
   const switchTab = (index) => {
     setActiveTab(index);
@@ -136,9 +138,35 @@ export default function Features() {
                     <span className="feat-badge">{feature.badge}</span>
                     <h3 className="feat-cardHeading">{feature.heading}</h3>
                     <p className="feat-cardDesc">{feature.description}</p>
-                    <div className="feat-stat">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px'}}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                      {feature.mockup.stat}
+                    {feature.tab === 'Broadcast WhatsApp Messages' && (
+                      <button 
+                        className="feat-primaryBtn"
+                        onClick={() => navigate('/broadcast')}
+                      >
+                        Explore Broadcast Features →
+                      </button>
+                    )}
+                    {feature.tab === 'AI Chatbot' && (
+                      <button 
+                        className="feat-primaryBtn"
+                        onClick={() => navigate('/chatbot')}
+                      >
+                        Explore AI Chatbot →
+                      </button>
+                    )}
+                    {feature.tab === 'Leads CRM' && (
+                      <button 
+                        className="feat-primaryBtn"
+                        onClick={() => navigate('/crm')}
+                      >
+                        Explore Leads CRM →
+                      </button>
+                    )}
+                    <div className="feat-cardFooter">
+                      <div className="feat-stat">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px'}}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        {feature.mockup.stat}
+                      </div>
                     </div>
                   </div>
 
