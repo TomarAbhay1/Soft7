@@ -16,9 +16,9 @@ export default function Home() {
       </header>
 
       <main>
-       <section>
-        <Hero></Hero>
-       </section>
+      <section>
+       <Hero />
+      </section>
        
        <HowItWorks />
        <GrowthEngine />

@@ -1,3 +1,7 @@
+/* Dark section background for navbar demo */
+.dark-section {
+  background: #18181b !important;
+}
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 body {

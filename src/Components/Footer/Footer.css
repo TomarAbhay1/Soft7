@@ -1,9 +1,29 @@
+/* ...existing code... */
+
 .footer-section {
   background: #f0fdf4; /* light soft green */
   border-top: 1px solid rgba(16, 185, 129, 0.2);
   padding: 80px 20px 40px 20px;
   font-family: 'Inter', sans-serif;
   color: #0f172a;
+}
+
+.footer-legal-links {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.footer-legal-links a {
+  color: #0f172a;
+  text-decoration: none;
+  margin: 0 6px;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.footer-legal-links a:hover {
+  color: #10b981;
+  text-decoration: underline;
 }
 
 .footer-container {

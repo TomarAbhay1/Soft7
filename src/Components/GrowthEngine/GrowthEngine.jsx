@@ -50,7 +50,8 @@ export default function GrowthEngine() {
 
   return (
     <section 
-      className={`growth-section ${isDark ? 'growth-dark' : 'growth-light'}`}
+      id="problems"
+      className={`growth-section ${isDark ? 'growth-dark dark-section' : 'growth-light'}`}
       ref={sectionRef}
     >
       <div className="growth-container">

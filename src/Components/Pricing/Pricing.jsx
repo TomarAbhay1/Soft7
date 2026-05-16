@@ -26,7 +26,7 @@ export default function Pricing() {
   }, []);
 
   return (
-    <section className="pricing-section">
+    <section id="pricing" className="pricing-section">
       <div className="pricing-container">
         
         <div className="pricing-header">

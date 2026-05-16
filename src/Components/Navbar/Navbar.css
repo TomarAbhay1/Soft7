@@ -1,0 +1,398 @@
+/* Premium Minimalist Frosted Glassmorphism Architecture */
+
+/* Full-Width Docked Sticky Shell transitioning to Floating Capsule Strip */
+.navbar-docked {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Frosted Light Mode */
+.navbar-glass-light {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Scrolled Floating Capsule State */
+.navbar-docked.navbar-scrolled {
+  top: 16px;
+  width: 92%;
+  max-width: 1100px;
+  border-radius: 100px;
+}
+
+.navbar-glass-light.navbar-scrolled {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Frosted Deep Mode (Dynamic Saturation Swap) */
+.navbar-glass-black {
+  background: rgba(12, 12, 14, 0.55);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.navbar-glass-black.navbar-scrolled {
+  background: rgba(12, 12, 14, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Dynamic Padding Animation Frame */
+.navbar-inner-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 16px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  transition: padding 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navbar-scrolled .navbar-inner-container {
+  padding: 10px 32px;
+}
+
+/* Left side alignment structure */
+.navbar-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.brand-geometric-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.geo-block {
+  background-color: #18181b;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.block-top {
+  width: 8px;
+  height: 12px;
+}
+
+.block-base {
+  width: 9px;
+  height: 20px;
+}
+
+.navbar-glass-black .geo-block {
+  background-color: #ffffff;
+}
+
+.brand-title-text {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  color: #18181b;
+  transition: color 0.3s ease;
+}
+
+.navbar-glass-black .brand-title-text {
+  color: #ffffff;
+}
+
+/* Center Stack */
+.navbar-center-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list-item {
+  position: relative;
+}
+
+/* Elegant Light Typographies */
+.nav-item-link {
+  background: none;
+  border: none;
+  color: #3f3f46;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 6px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.navbar-glass-black .nav-item-link {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.nav-item-link:hover,
+.nav-item-link.active {
+  color: #10b981;
+}
+
+.navbar-glass-black .nav-item-link:hover,
+.navbar-glass-black .nav-item-link.active {
+  color: #ffffff;
+}
+
+/* Right Side Actions Stack */
+.navbar-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Minimalist Clean Pills */
+.btn-login-pill {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: #18181b;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btn-login-pill:hover {
+  background: #f4f4f5;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.navbar-glass-black .btn-login-pill {
+  background: #ffffff;
+  color: #000000;
+  border: none;
+}
+
+.navbar-glass-black .btn-login-pill:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Demo Solid Button */
+.btn-demo-pill {
+  background: #18181b;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 9px 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-demo-pill:hover {
+  background: #27272a;
+}
+
+.navbar-glass-black .btn-demo-pill {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.navbar-glass-black .btn-demo-pill:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.demo-chevron {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+.btn-demo-pill:hover .demo-chevron {
+  transform: translateX(2px);
+}
+
+/* Mobile Toggles */
+.btn-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #18181b;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.navbar-glass-black .btn-mobile-toggle {
+  color: #ffffff;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1080px) {
+  .navbar-inner-container {
+    padding: 16px 24px;
+  }
+}
+
+@media (max-width: 850px) {
+  .navbar-center-nav {
+    display: none;
+  }
+  
+  .btn-login-pill {
+    display: none;
+  }
+  
+  .btn-mobile-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-inner-container {
+    padding: 14px 16px;
+  }
+  
+  .btn-demo-pill {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Touch Drawer System */
+.mobile-glass-drawer {
+  position: fixed;
+  top: 65px;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-glass-black ~ .mobile-glass-drawer,
+.navbar-glass-black .mobile-glass-drawer {
+  background: rgba(14, 14, 16, 0.92);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.mobile-glass-drawer.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.drawer-links-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.group-header {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a1a1aa;
+}
+
+.drawer-item-link {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #18181b;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navbar-glass-black .drawer-item-link {
+  color: #ffffff;
+}
+
+.drawer-item-link:hover {
+  color: #10b981;
+}
+
+.drawer-actions-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.navbar-glass-black .drawer-actions-stack {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.drawer-login-btn {
+  padding: 12px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #18181b;
+  cursor: pointer;
+}
+
+.navbar-glass-black .drawer-login-btn {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.drawer-demo-btn {
+  padding: 12px;
+  background: #18181b;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.navbar-glass-black .drawer-demo-btn {
+  background: #ffffff;
+  color: #000000;
+}

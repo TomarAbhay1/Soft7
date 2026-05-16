@@ -51,6 +51,13 @@ export default function Footer() {
         <div className="footer-bottom">
           <p className="copyright">© 2026 WhatsApp API. All rights reserved.</p>
           <p className="tagline">Built for businesses that talk to humans.</p>
+          <div className="footer-legal-links">
+            <a href="/privacy-policy">Privacy Policy</a>
+            <span> | </span>
+            <a href="/terms-and-conditions">Terms &amp; Conditions</a>
+            <span> | </span>
+            <a href="/contact-us">Contact Us</a>
+          </div>
         </div>
 
       </div>

@@ -18,7 +18,7 @@ const integrationItems = [
 
 export default function Integrations() {
   return (
-    <section className="integrations-section">
+    <section id="integrations" className="integrations-section">
       <div className="integrations-container">
         
         <div className="integrations-content">

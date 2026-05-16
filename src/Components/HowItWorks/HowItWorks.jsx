@@ -51,7 +51,7 @@ export default function HowItWorks() {
   }, []);
 
   return (
-    <section className="how-it-works-section">
+    <section id="solution" className="how-it-works-section">
       <div className="hiw-container">
         
         <div className="hiw-text-column">

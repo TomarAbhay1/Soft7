@@ -29,7 +29,7 @@ export default function CTABanner() {
       <div className="cta-banner-container">
         
         <div 
-          className={`cta-banner-box ${isVisible ? 'banner-visible' : ''}`}
+          className={`cta-banner-box dark-section ${isVisible ? 'banner-visible' : ''}`}
           ref={bannerRef}
         >
           <div className="cta-banner-content">
