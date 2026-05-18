@@ -2,7 +2,7 @@
 
 /* Full-Width Docked Sticky Shell transitioning to Floating Capsule Strip */
 .navbar-docked {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;

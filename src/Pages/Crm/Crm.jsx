@@ -158,12 +158,6 @@ const Crm = () => {
 
   return (
     <div className="crm-redesign" onMouseMove={handleMouseMove}>
-      <nav className="nav-simple">
-         <button onClick={() => navigate('/')} className="back-link">
-            <FiArrowLeft /> Back to Home
-         </button>
-         <div className="logo-text">Soft7 CRM</div>
-      </nav>
 
       {/* Hero Section */}
       <header className="hero-section">
@@ -338,3 +332,4 @@ const Crm = () => {
 };
 
 export default Crm;
+

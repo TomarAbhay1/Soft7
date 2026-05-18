@@ -20,7 +20,7 @@ const Broadcast = () => {
     { icon: <FiShoppingCart />, title: "E-commerce", desc: "Abandoned cart reminders, order updates, flash sales.", color: "#ff8b67" },
     { icon: <FiCalendar />, title: "Events", desc: "RSVP confirmations, reminders, last-minute updates.", color: "#a855f7" },
     { icon: <FiBookOpen />, title: "Education", desc: "Class schedules, assignment alerts, parent updates.", color: "#00b4d8" },
-    { icon: <FiHeart />, title: "Healthcare", desc: "Appointment reminders, prescriptions, follow-ups.", color: "#10b981" },
+    { icon: <FiHeart />, title: "Healthcare", desc: "Appointment reminders, prescriptions, follow-ups.", color: "#2563eb" },
     { icon: <FiBriefcase />, title: "Agencies", desc: "Client check-ins, campaign reports, status updates.", color: "#f59e0b" },
     { icon: <FiTarget />, title: "Marketing", desc: "Launch announcements, segmented promos, surveys.", color: "#ec4899" },
   ];
@@ -36,7 +36,7 @@ const Broadcast = () => {
     { icon: <FiZap />, title: "Lightning Broadcasts", desc: "Send to 100,000+ contacts in seconds with smart queueing.", color: "#f59e0b" },
     { icon: <FiUsers />, title: "Smart Segments", desc: "Group, tag, and target audiences with dynamic filters.", color: "#a855f7" },
     { icon: <FiBarChart2 />, title: "Real-time Analytics", desc: "Track delivery, reads, clicks, and replies live.", color: "#00b4d8" },
-    { icon: <FiEdit3 />, title: "AI Composer", desc: "Generate on-brand messages with built-in AI assistance.", color: "#10b981" },
+    { icon: <FiEdit3 />, title: "AI Composer", desc: "Generate on-brand messages with built-in AI assistance.", color: "#2563eb" },
     { icon: <FiShield />, title: "Anti-Ban Safe", desc: "Throttling and warm-up keep your number healthy.", color: "#ec4899" },
     { icon: <FiCalendar />, title: "Smart Scheduling", desc: "Pick the perfect time zone for every recipient.", color: "#ff8b67" },
   ];
@@ -192,12 +192,6 @@ const Broadcast = () => {
 
   return (
     <div className="broadcast-redesign">
-      <nav className="nav-simple">
-         <button onClick={() => navigate('/')} className="back-link">
-            <FiArrowLeft /> Back to Home
-         </button>
-         <div className="logo-text">Soft7</div>
-      </nav>
 
       {/* Hero Section */}
       <header className="hero-section">
@@ -216,10 +210,10 @@ const Broadcast = () => {
             </div>
             <div className="social-proof">
                <div className="avatar-group">
-                  <div className="avatar" style={{background: '#10b981'}}></div>
-                  <div className="avatar" style={{background: '#34d399'}}></div>
-                  <div className="avatar" style={{background: '#6ee7b7'}}></div>
-                  <div className="avatar" style={{background: '#a7f3d0'}}></div>
+                  <div className="avatar" style={{background: '#2563eb'}}></div>
+                  <div className="avatar" style={{background: '#3b82f6'}}></div>
+                  <div className="avatar" style={{background: '#60a5fa'}}></div>
+                  <div className="avatar" style={{background: '#93c5fd'}}></div>
                </div>
                <span>Loved by 4,200+ businesses</span>
             </div>
@@ -488,3 +482,5 @@ const Broadcast = () => {
 };
 
 export default Broadcast;
+
+

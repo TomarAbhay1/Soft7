@@ -185,12 +185,6 @@ const Chatbot = () => {
 
   return (
     <div className="chatbot-redesign" onMouseMove={handleMouseMove}>
-      <nav className="nav-simple">
-         <button onClick={() => navigate('/')} className="back-link">
-            <FiArrowLeft /> Back to Home
-         </button>
-         <div className="logo-text">Soft7 AI</div>
-      </nav>
 
       {/* Hero Section */}
       <header className="hero-section">
@@ -366,3 +360,4 @@ const Chatbot = () => {
 };
 
 export default Chatbot;
+

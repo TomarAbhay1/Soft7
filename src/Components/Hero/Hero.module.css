@@ -10,7 +10,7 @@
     position: relative;
     overflow: hidden;
     background: linear-gradient(to bottom, #D8FFF8 0%, #D8FFF8 60%, #FFFFFF 100%);
-    padding: 2rem 1rem;
+    padding: 8rem 1rem 2rem 1rem;
 }
 
 /* Glassmorphism Background Orbs */
@@ -84,8 +84,8 @@
 }
 
 .heroText h1 {
-  font-family: 'ADLaM Display', cursive;
-  font-weight: 400;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
 }
 
 .heroText span{
